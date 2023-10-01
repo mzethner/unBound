@@ -1,0 +1,2970 @@
+[gd_scene load_steps=64 format=2]
+
+[ext_resource path="res://assets/environment/tileset.png" type="Texture" id=1]
+[ext_resource path="res://assets/player/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/bot/botSpawner.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/checkPoint/checkPoint.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/environment/conveyer/64Conveyer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/environment/deathBeam/deathBeam.tscn" type="PackedScene" id=6]
+[ext_resource path="res://levels/testLevel.gd" type="Script" id=7]
+[ext_resource path="res://assets/bot/constantBotSpawner.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/environment/lightOrb/lightOrb.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/environment/silhouette.png" type="Texture" id=10]
+[ext_resource path="res://assets/Fonts/Pixeled.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://assets/environment/tutSign.png" type="Texture" id=12]
+[ext_resource path="res://assets/environment/endLight.png" type="Texture" id=13]
+[ext_resource path="res://assets/lighting/doorLight.png" type="Texture" id=14]
+[ext_resource path="res://assets/Fonts/Retro Gaming.ttf" type="DynamicFontData" id=15]
+[ext_resource path="res://assets/sounds/themeSong.mp3" type="AudioStream" id=16]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+points = PoolVector2Array( 32, 64, 0, 64, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=17]
+points = PoolVector2Array( 32, 64, 0, 64, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=28]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=29]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=44]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="TileSet" id=4]
+0/name = "tileset.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 128, 128, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "tileset.png 1"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 192, 128, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "tileset.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 256, 128, 64, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 3 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "tileset.png 3"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 128, 192, 64, 64 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "tileset.png 4"
+4/texture = ExtResource( 1 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 192, 192, 64, 64 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "tileset.png 5"
+5/texture = ExtResource( 1 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 256, 192, 64, 64 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "tileset.png 6"
+6/texture = ExtResource( 1 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 320, 64, 64 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "tileset.png 7"
+7/texture = ExtResource( 1 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 64, 320, 64, 64 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "tileset.png 8"
+8/texture = ExtResource( 1 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 128, 320, 64, 64 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "tileset.png 9"
+9/texture = ExtResource( 1 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 192, 320, 64, 64 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "tileset.png 10"
+10/texture = ExtResource( 1 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 256, 320, 64, 64 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "tileset.png 11"
+11/texture = ExtResource( 1 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 320, 320, 64, 64 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "tileset.png 12"
+12/texture = ExtResource( 1 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 448, 320, 64, 64 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "tileset.png 13"
+13/texture = ExtResource( 1 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 384, 320, 64, 64 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "tileset.png 14"
+14/texture = ExtResource( 1 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 384, 64, 64 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "tileset.png 15"
+15/texture = ExtResource( 1 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 128, 384, 64, 64 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "tileset.png 16"
+16/texture = ExtResource( 1 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 128, 448, 64, 64 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
+17/name = "tileset.png 17"
+17/texture = ExtResource( 1 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 0, 448, 64, 64 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape_one_way = false
+17/shape_one_way_margin = 0.0
+17/shapes = [  ]
+17/z_index = 0
+18/name = "tileset.png 18"
+18/texture = ExtResource( 1 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 256, 448, 64, 64 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape_one_way = false
+18/shape_one_way_margin = 0.0
+18/shapes = [  ]
+18/z_index = 0
+19/name = "tileset.png 19"
+19/texture = ExtResource( 1 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 128, 256, 64, 64 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape_one_way = false
+19/shape_one_way_margin = 0.0
+19/shapes = [  ]
+19/z_index = 0
+20/name = "tileset.png 20"
+20/texture = ExtResource( 1 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 192, 256, 64, 64 )
+20/tile_mode = 0
+20/occluder_offset = Vector2( 0, 0 )
+20/navigation_offset = Vector2( 0, 0 )
+20/shape_offset = Vector2( 0, 0 )
+20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+20/shape_one_way = false
+20/shape_one_way_margin = 0.0
+20/shapes = [  ]
+20/z_index = 0
+21/name = "tileset.png 21"
+21/texture = ExtResource( 1 )
+21/tex_offset = Vector2( 0, 0 )
+21/modulate = Color( 1, 1, 1, 1 )
+21/region = Rect2( 256, 256, 64, 64 )
+21/tile_mode = 0
+21/occluder_offset = Vector2( 0, 0 )
+21/navigation_offset = Vector2( 0, 0 )
+21/shape_offset = Vector2( 0, 0 )
+21/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+21/shape_one_way = false
+21/shape_one_way_margin = 0.0
+21/shapes = [  ]
+21/z_index = 0
+22/name = "tileset.png 22"
+22/texture = ExtResource( 1 )
+22/tex_offset = Vector2( 0, 0 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 128, 64, 64, 64 )
+22/tile_mode = 0
+22/occluder_offset = Vector2( 0, 0 )
+22/navigation_offset = Vector2( 0, 0 )
+22/shape_offset = Vector2( 0, 0 )
+22/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+22/shape = SubResource( 8 )
+22/shape_one_way = false
+22/shape_one_way_margin = 1.0
+22/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+22/z_index = 0
+23/name = "tileset.png 23"
+23/texture = ExtResource( 1 )
+23/tex_offset = Vector2( 0, 0 )
+23/modulate = Color( 1, 1, 1, 1 )
+23/region = Rect2( 192, 64, 64, 64 )
+23/tile_mode = 0
+23/occluder_offset = Vector2( 0, 0 )
+23/navigation_offset = Vector2( 0, 0 )
+23/shape_offset = Vector2( 0, 0 )
+23/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+23/shape = SubResource( 9 )
+23/shape_one_way = false
+23/shape_one_way_margin = 1.0
+23/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+23/z_index = 0
+24/name = "tileset.png 24"
+24/texture = ExtResource( 1 )
+24/tex_offset = Vector2( 0, 0 )
+24/modulate = Color( 1, 1, 1, 1 )
+24/region = Rect2( 256, 64, 64, 64 )
+24/tile_mode = 0
+24/occluder_offset = Vector2( 0, 0 )
+24/navigation_offset = Vector2( 0, 0 )
+24/shape_offset = Vector2( 0, 0 )
+24/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+24/shape = SubResource( 10 )
+24/shape_one_way = false
+24/shape_one_way_margin = 1.0
+24/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 10 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+24/z_index = 0
+25/name = "tileset.png 25"
+25/texture = ExtResource( 1 )
+25/tex_offset = Vector2( 0, 0 )
+25/modulate = Color( 1, 1, 1, 1 )
+25/region = Rect2( 320, 64, 32, 64 )
+25/tile_mode = 0
+25/occluder_offset = Vector2( 0, 0 )
+25/navigation_offset = Vector2( 0, 0 )
+25/shape_offset = Vector2( 0, 0 )
+25/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+25/shape = SubResource( 16 )
+25/shape_one_way = false
+25/shape_one_way_margin = 1.0
+25/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 16 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+25/z_index = 0
+26/name = "tileset.png 26"
+26/texture = ExtResource( 1 )
+26/tex_offset = Vector2( 0, 0 )
+26/modulate = Color( 1, 1, 1, 1 )
+26/region = Rect2( 320, 128, 32, 32 )
+26/tile_mode = 0
+26/occluder_offset = Vector2( 0, 0 )
+26/navigation_offset = Vector2( 0, 0 )
+26/shape_offset = Vector2( 0, 0 )
+26/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+26/shape_one_way = false
+26/shape_one_way_margin = 0.0
+26/shapes = [  ]
+26/z_index = 0
+27/name = "tileset.png 27"
+27/texture = ExtResource( 1 )
+27/tex_offset = Vector2( 0, 0 )
+27/modulate = Color( 1, 1, 1, 1 )
+27/region = Rect2( 320, 64, 64, 64 )
+27/tile_mode = 0
+27/occluder_offset = Vector2( 0, 0 )
+27/navigation_offset = Vector2( 0, 0 )
+27/shape_offset = Vector2( 0, 0 )
+27/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+27/shape = SubResource( 17 )
+27/shape_one_way = false
+27/shape_one_way_margin = 1.0
+27/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 17 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+27/z_index = 0
+28/name = "tileset.png 28"
+28/texture = ExtResource( 1 )
+28/tex_offset = Vector2( 0, 0 )
+28/modulate = Color( 1, 1, 1, 1 )
+28/region = Rect2( 320, 128, 64, 64 )
+28/tile_mode = 0
+28/occluder_offset = Vector2( 0, 0 )
+28/navigation_offset = Vector2( 0, 0 )
+28/shape_offset = Vector2( 0, 0 )
+28/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+28/shape_one_way = false
+28/shape_one_way_margin = 0.0
+28/shapes = [  ]
+28/z_index = 0
+29/name = "tileset.png 29"
+29/texture = ExtResource( 1 )
+29/tex_offset = Vector2( 0, 0 )
+29/modulate = Color( 1, 1, 1, 1 )
+29/region = Rect2( 320, 64, 32, 32 )
+29/tile_mode = 0
+29/occluder_offset = Vector2( 0, 0 )
+29/navigation_offset = Vector2( 0, 0 )
+29/shape_offset = Vector2( 0, 0 )
+29/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+29/shape = SubResource( 28 )
+29/shape_one_way = false
+29/shape_one_way_margin = 1.0
+29/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 28 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+29/z_index = 0
+30/name = "tileset.png 30"
+30/texture = ExtResource( 1 )
+30/tex_offset = Vector2( 0, 0 )
+30/modulate = Color( 1, 1, 1, 1 )
+30/region = Rect2( 384, 64, 64, 64 )
+30/tile_mode = 0
+30/occluder_offset = Vector2( 0, 0 )
+30/navigation_offset = Vector2( 0, 0 )
+30/shape_offset = Vector2( 0, 0 )
+30/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+30/shape = SubResource( 29 )
+30/shape_one_way = false
+30/shape_one_way_margin = 1.0
+30/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 29 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+30/z_index = 0
+31/name = "tileset.png 31"
+31/texture = ExtResource( 1 )
+31/tex_offset = Vector2( 0, 0 )
+31/modulate = Color( 1, 1, 1, 1 )
+31/region = Rect2( 64, 128, 64, 64 )
+31/tile_mode = 0
+31/occluder_offset = Vector2( 0, 0 )
+31/navigation_offset = Vector2( 0, 0 )
+31/shape_offset = Vector2( 0, 0 )
+31/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+31/shape = SubResource( 44 )
+31/shape_one_way = false
+31/shape_one_way_margin = 1.0
+31/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 44 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+31/z_index = 0
+
+[sub_resource type="GDScript" id=11]
+script/source = "extends Node2D
+
+
+onready var floorArea = $Area2D
+export var direction = Vector2.ZERO
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+func _process(delta: float):
+	floorArea.set_collision_mask_bit(9, false)
+	var floorBodies = floorArea.get_overlapping_bodies()
+	if floorBodies.size() > 0:
+		for each in floorBodies:
+			if each.botted == true:
+				each.global_position += direction * delta
+		for each in floorBodies:
+			if each.botted == true:
+				each.global_position += direction * delta
+"
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 80.5, 32 )
+
+[sub_resource type="GDScript" id=14]
+script/source = "extends Node2D
+
+
+onready var floorArea = $Area2D
+export var direction = Vector2.ZERO
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+func _process(delta: float):
+	floorArea.set_collision_mask_bit(9, false)
+	var floorBodies = floorArea.get_overlapping_bodies()
+	if floorBodies.size() > 0:
+		for each in floorBodies:
+			if each.botted == true:
+				each.global_position += direction * delta
+		for each in floorBodies:
+			if each.botted == true:
+				each.global_position += direction * delta
+"
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 96, 32 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 96, 32 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 128, 32 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 96, 32 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 176, 32 )
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 128, 32 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 64, 32 )
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 288, 32 )
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 112, 32 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 128, 32 )
+
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 96, 32 )
+
+[sub_resource type="RectangleShape2D" id=27]
+extents = Vector2( 240, 32 )
+
+[sub_resource type="RectangleShape2D" id=30]
+extents = Vector2( 160.5, 32 )
+
+[sub_resource type="RectangleShape2D" id=31]
+extents = Vector2( 192, 32 )
+
+[sub_resource type="RectangleShape2D" id=32]
+extents = Vector2( 112.5, 32 )
+
+[sub_resource type="RectangleShape2D" id=33]
+extents = Vector2( 256, 32 )
+
+[sub_resource type="RectangleShape2D" id=34]
+extents = Vector2( 176, 32 )
+
+[sub_resource type="RectangleShape2D" id=38]
+extents = Vector2( 128, 32 )
+
+[sub_resource type="RectangleShape2D" id=39]
+extents = Vector2( 208, 32 )
+
+[sub_resource type="RectangleShape2D" id=40]
+extents = Vector2( 208, 32 )
+
+[sub_resource type="RectangleShape2D" id=41]
+extents = Vector2( 64, 32 )
+
+[sub_resource type="RectangleShape2D" id=42]
+extents = Vector2( 223.5, 32 )
+
+[sub_resource type="RectangleShape2D" id=43]
+extents = Vector2( 193, 32 )
+
+[sub_resource type="GDScript" id=35]
+script/source = "extends Node2D
+
+onready var tween = $Tween
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	var currentPos = global_position
+	var randomPos = global_position + Vector2(rand_range(10,10),rand_range(10,-10))
+	tween.interpolate_property(self,\"global_position\", currentPos, randomPos, 5,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
+	tween.interpolate_property(self,\"global_position\", randomPos, currentPos, 5,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT,5)
+	tween.start()
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta: float) -> void:
+#	pass
+"
+
+[sub_resource type="DynamicFont" id=36]
+size = 5
+extra_spacing_top = -8
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=37]
+size = 5
+extra_spacing_top = -8
+font_data = ExtResource( 11 )
+
+[sub_resource type="RectangleShape2D" id=45]
+extents = Vector2( 88.5, 72.5 )
+
+[sub_resource type="Gradient" id=6]
+offsets = PoolRealArray( 0, 0.23871, 0.883871, 1 )
+colors = PoolColorArray( 0, 0, 0, 0, 0.546875, 1, 0.823441, 1, 0.734375, 0.985214, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=7]
+gradient = SubResource( 6 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+emission_shape = 1
+emission_sphere_radius = 4000.0
+flag_disable_z = true
+direction = Vector3( 0.5, -1, 0 )
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 30.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 1.0
+color_ramp = SubResource( 7 )
+
+[sub_resource type="DynamicFont" id=46]
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=47]
+font_data = ExtResource( 15 )
+
+[node name="testLevel" type="Node2D"]
+position = Vector2( 33, 47 )
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -206.0 ],
+"_edit_vertical_guides_": [ 737.0 ]
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -3
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+show_behind_parent = true
+margin_left = -14.0
+margin_top = -19.0
+margin_right = 662.0
+margin_bottom = 384.0
+color = Color( 0.160784, 0.164706, 0.188235, 1 )
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0.156863 )
+position = Vector2( 325.5, 183.5 )
+scale = Vector2( 0.528906, 0.5625 )
+texture = ExtResource( 10 )
+
+[node name="floor" type="TileMap" parent="."]
+z_index = -2
+tile_set = SubResource( 4 )
+collision_layer = 2
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( -3538879, 31, 0, -3473343, 31, 0, -3407807, 31, 0, -3342271, 31, 0, -3276736, 22, 0, -3276735, 22, 0, -3276734, 22, 0, -3211200, 22, 0, -3211199, 22, 0, -3211198, 22, 0, -3145664, 5, 0, -3145663, 4, 0, -3145662, 3, 0, -3080127, 27, 0, -3014592, 27, 0, -3014591, 27, 0, -2949056, 27, 0, -2949055, 27, 0, -2883521, 27, 0, -2883520, 27, 0, -2883519, 27, 0, -2817985, 25, 0, -2817984, 27, 0, -2817983, 27, 0, -2752449, 25, 0, -2752448, 27, 0, -2752447, 27, 0, -2686913, 25, 0, -2686912, 27, 0, -2621390, 536870939, 0, -2621389, -2147483621, 0, -2621388, -2147483621, 0, -2621387, -2147483621, 0, -2621386, -2147483621, 0, -2621385, -2147483621, 0, -2621384, -2147483621, 0, -2621377, 25, 0, -2621376, 27, 0, -2555854, 536870939, 0, -2555841, 25, 0, -2490319, 536870935, 0, -2490318, 536870939, 0, -2490305, -1610612709, 0, -2490304, -1610612709, 0, -2424783, 536870915, 0, -2424782, 536870939, 0, -2424781, -536870885, 0, -2424780, -536870885, 0, -2424779, 1073741854, 0, -2359264, 1610612760, 0, -2359263, 22, 0, -2359262, 1610612759, 0, -2359258, 1610612760, 0, -2359246, 536870940, 0, -2359245, 3, 0, -2359244, 536870917, 0, -2359243, 28, 0, -2293728, 22, 0, -2293727, 22, 0, -2293726, 22, 0, -2293724, 22, 0, -2293722, 1610612760, 0, -2293716, -1610612736, 0, -2293714, 536870935, 0, -2293709, -2147483621, 0, -2228192, 1610612737, 0, -2228191, 1610612738, 0, -2228190, 1610612736, 0, -2228188, 3, 0, -2228186, 1610612760, 0, -2228180, 4, 0, -2228178, 536870916, 0, -2162656, 3, 0, -2162655, 4, 0, -2162654, 5, 0, -2162650, 4, 0, -1834981, 536870939, 0, -1834980, 536870939, 0, -1834973, -1073741797, 0, -1834972, -1073741794, 0, -1769445, 536870939, 0, -1769444, 536870939, 0, -1769439, 536870940, 0, -1769438, 536870917, 0, -1769437, 536870916, 0, -1769436, 28, 0, -1703909, 1610612763, 0, -1638373, 1610612763, 0, -1638372, 536870942, 0, -1638371, -2147483621, 0, -1638370, -2147483621, 0, -1638369, -2147483618, 0, -1572837, 1610612763, 0, -1507301, 1610612763, 0, -1441767, 536870916, 0, -1441766, 536870917, 0, -1441765, 536870915, 0, -1376229, 1610612763, 0, -1310693, 1610612763, 0, -1245181, 1610612766, 0, -1245157, 1610612763, 0, -1179645, 1610612766, 0, -1179621, 1610612763, 0, -1114109, 536870940, 0, -1114108, 1610612766, 0, -1114087, -1073741797, 0, -1114086, -1073741797, 0, -1114085, -1073741797, 0, -1114083, -1073741797, 0, -1114082, -1073741797, 0, -1048572, 1610612763, 0, -1048551, 536870915, 0, -1048550, 536870917, 0, -1048549, 536870917, 0, -1048548, 536870940, 0, -1048547, 536870917, 0, -1048546, 536870916, 0, -1048545, 28, 0, -983036, 1610612763, 0, -983009, 1073741851, 0, -917500, 536870940, 0, -917499, 1610612766, 0, -917473, 1073741851, 0, -851964, 1610612766, 0, -851963, 536870940, 0, -851937, 1073741851, 0, -851936, 1073741851, 0, -786428, 536870940, 0, -786401, 1073741851, 0, -786400, 1073741851, 0, -720864, 1073741851, 0, -655358, -1610612714, 0, -655357, 1, 0, -655356, 24, 0, -655334, 28, 0, -589822, 536870916, 0, -589821, 22, 0, -589820, 536870915, 0, -589805, 25, 0, -589802, 536870939, 0, -524285, 23, 0, -524277, 22, 0, -524276, 23, 0, -524269, 25, 0, -524268, -536870885, 0, -524267, -2147483626, 0, -524266, 536870939, 0, -524262, -1073741797, 0, -524261, -1073741797, 0, -524260, -1073741797, 0, -524259, -1073741797, 0, -458749, 23, 0, -458748, 22, 0, -458741, 5, 0, -458740, 536870915, 0, -458733, 25, 0, -458732, -2147483621, 0, -458731, -2147483625, 0, -458730, 536870939, 0, -458729, -536870885, 0, -458728, -536870885, 0, -458727, -536870885, 0, -458726, -536870885, 0, -458725, -536870885, 0, -393213, 536870917, 0, -393212, 0, 0, -393197, 25, 0, -393195, 536870917, 0, -393194, 536870940, 0, -393193, 3, 0, -393192, 536870916, 0, -393191, 5, 0, -393190, 4, 0, -393189, 536870915, 0, -327677, 23, 0, -327676, 1, 0, -327675, 24, 0, -327673, 23, 0, -327672, 22, 0, -327661, 536870938, 0, -262141, 23, 0, -262140, 22, 0, -262139, 1, 0, -262137, 22, 0, -262136, 24, 0, -196605, 3, 0, -196604, 4, 0, -196603, 5, 0, -196601, 3, 0, -196600, 5, 0, -131069, 19, 0, -131068, 20, 0, -131067, 21, 0 )
+
+[node name="floorTouchUp" type="TileMap" parent="."]
+z_index = -2
+tile_set = SubResource( 4 )
+collision_layer = 2
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( -1507303, -536870885, 0, -1507302, -536870885, 0, -1507301, 1073741854, 0, -1179645, 536870940, 0, -1114085, -1610612706, 0, -589798, 27, 0, -524262, 27, 0, -458726, 3, 0, -458725, 536870916, 0, -458724, 536870917, 0, -458723, 536870915, 0, -393190, 4, 0 )
+
+[node name="floorOffset" type="TileMap" parent="."]
+position = Vector2( 32, 32 )
+z_index = -2
+tile_set = SubResource( 4 )
+collision_layer = 2
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( -2686919, -2147483626, 0, -2686918, -2147483626, 0, -2686917, -2147483626, 0, -2686916, -2147483626, 0, -2686915, -2147483626, 0, -2621390, 536870940, 0, -2621389, 536870917, 0, -2621388, 3, 0, -2621387, 536870917, 0, -2621386, 536870916, 0, -2621385, 536870915, 0, -2621384, 28, 0, -2621383, 536870917, 0, -2621382, 536870915, 0, -2621381, 536870916, 0, -2621380, 536870917, 0, -2621379, 536870915, 0, -2424785, 536870935, 0, -2359257, 1610612758, 0, -2359256, 1610612758, 0, -2359255, 1610612758, 0, -2359254, 1610612758, 0, -2359249, 536870917, 0, -2293721, 1610612758, 0, -2293720, 1610612758, 0, -2293719, 1610612758, 0, -2293718, 1610612758, 0, -2228185, 5, 0, -2228184, 3, 0, -2228183, 5, 0, -2228182, 4, 0, -2162655, 27, 0, -2097119, 27, 0, -2031583, 27, 0, -1966056, -536870885, 0, -1966055, -536870885, 0, -1966054, -536870885, 0, -1966053, -536870885, 0, -1966052, -536870885, 0, -1966051, -536870885, 0, -1966050, -536870885, 0, -1966049, -536870885, 0, -1966047, 27, 0, -1900520, 536870917, 0, -1900519, 536870916, 0, -1900518, 536870915, 0, -1900517, 536870917, 0, -1900516, 536870916, 0, -1900515, 536870915, 0, -1900514, 5, 0, -1900513, 4, 0, -1900511, 27, 0, -1834975, -1610612709, 0, -1834974, -1610612709, 0, -1769444, 27, 0, -1703908, 27, 0, -1638372, 536870917, 0, -1638371, 536870916, 0, -1638370, 536870915, 0, -1572836, 27, 0, -1507300, 27, 0, -1441764, 27, 0, -1376228, 27, 0, -1310716, 1610612760, 0, -1310692, 27, 0, -1245180, 536870915, 0, -1245156, 27, 0, -1179620, 27, 0, -1114087, -1610612709, 0, -1114086, -1610612709, 0, -1114084, -1610612709, 0, -1114083, -1610612709, 0, -1114082, -1610612709, 0, -1048550, 536870934, 0, -1048549, 536870935, 0, -1048548, 536870913, 0, -983015, 536870935, 0, -983014, 536870934, 0, -983013, 536870914, 0, -983012, -536870888, 0, -983011, 536870935, 0, -917479, 536870936, 0, -917478, 536870935, 0, -917477, 536870917, 0, -917476, 536870913, 0, -917475, 536870936, 0, -851943, 536870916, 0, -851942, 536870917, 0, -851940, 536870915, 0, -851939, 536870917, 0, -786428, 1610612763, 0, -720892, 536870940, 0, -720882, 25, 0, -720873, -536870885, 0, -720872, -536870885, 0, -720871, -536870885, 0, -720870, -536870885, 0, -720869, -536870885, 0, -720868, -536870885, 0, -720867, -536870885, 0, -720866, -536870885, 0, -720865, -536870885, 0, -655347, 25, 0, -655346, 25, 0, -655345, 25, 0, -589811, 25, 0, -589810, 25, 0, -589809, 25, 0, -589807, 536870936, 0, -524275, 25, 0, -524274, 536870938, 0, -524273, 25, 0, -524272, 22, 0, -524271, 23, 0, -458741, 0, 0, -458739, 26, 0, -458737, 26, 0, -458736, 3, 0, -458735, 4, 0, -458733, 536870940, 0, -458732, 536870938, 0, -393205, 0, 0, -327671, 22, 0, -327670, 22, 0, -327669, 22, 0, -262135, 3, 0, -262134, 4, 0, -262133, 5, 0 )
+
+[node name="shadow" type="TileMap" parent="."]
+modulate = Color( 0, 0, 0, 0.698039 )
+z_index = -1
+tile_set = SubResource( 4 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( -2490319, 536870924, 0, -2359264, 6, 0, -2359263, -1610612729, 0, -2359262, -1610612730, 0, -2359258, 13, 0, -2293728, 7, 0, -2293726, 1610612743, 0, -2293722, 1610612745, 0, -2293716, 536870924, 0, -2293714, 536870924, 0, -2228192, -1073741818, 0, -2228191, -1073741817, 0, -2228190, 1610612742, 0, -2228186, 1610612749, 0, -655358, -2147483635, 0, -655357, -536870904, 0, -655356, -536870899, 0, -589821, 536870921, 0, -524285, 536870921, 0, -524277, -2147483635, 0, -524276, -536870899, 0, -458749, 1073741830, 0, -458748, 536870918, 0, -393212, 536870921, 0, -327677, 6, 0, -327676, 18, 0, -327675, -1610612730, 0, -327673, -2147483642, 0, -327672, 536870918, 0, -262141, -1073741818, 0, -262140, -1073741817, 0, -262139, 1610612742, 0, -262137, 1073741830, 0, -262136, -536870906, 0 )
+
+[node name="shadowtouchup" type="TileMap" parent="."]
+modulate = Color( 0, 0, 0, 0.698039 )
+z_index = -1
+tile_set = SubResource( 4 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( -655357, -2147483637, 0, -458749, 536870920, 0, -458748, 1073741832, 0 )
+
+[node name="shadowOffset" type="TileMap" parent="."]
+modulate = Color( 0, 0, 0, 0.698039 )
+position = Vector2( 32, 32 )
+z_index = -1
+tile_set = SubResource( 4 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( -2424785, 536870924, 0, -2359257, 6, 0, -2359256, -1610612729, 0, -2359255, -1610612729, 0, -2359254, -1610612730, 0, -2293721, -1073741818, 0, -2293720, -1073741817, 0, -2293719, -1073741817, 0, -2293718, 1610612742, 0, -1310716, 12, 0, -1048550, 6, 0, -1048548, 536870918, 0, -983015, 6, 0, -983014, -2147483640, 0, -983012, 536870920, 0, -983011, 536870918, 0, -917479, 1073741830, 0, -917478, -536870906, 0, -917476, 1073741830, 0, -917475, -536870906, 0, -655337, 4, 0, -655336, 5, 0, -655335, 3, 0, -655334, 536870916, 0, -655333, 536870917, 0, -655332, 536870915, 0, -655331, 536870916, 0, -655330, 536870917, 0, -655329, 536870915, 0, -589807, 536870925, 0, -524272, -2147483635, 0, -524271, -536870906, 0 )
+
+[node name="shadowOffsetTouchUp" type="TileMap" parent="."]
+modulate = Color( 0, 0, 0, 0.698039 )
+position = Vector2( 32, 32 )
+z_index = -1
+tile_set = SubResource( 4 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( -1048549, -2147483641, 0, -983014, -536870904, 0, -983013, -536870905, 0, -983012, 1073741832, 0, -524271, -2147483640, 0 )
+
+[node name="converyer2" type="Node2D" parent="."]
+
+[node name="64Conveyer" parent="converyer2" instance=ExtResource( 5 )]
+position = Vector2( 768, -288 )
+rotation = -1.5708
+script = SubResource( 11 )
+direction = Vector2( 0, 10 )
+
+[node name="AnimatedSprite" parent="converyer2/64Conveyer" index="0"]
+position = Vector2( 32, 0 )
+frame = 0
+
+[node name="backup1" parent="converyer2/64Conveyer" index="1"]
+position = Vector2( 32, 0 )
+frame = 0
+
+[node name="backup2" parent="converyer2/64Conveyer" index="2"]
+position = Vector2( 96, 0 )
+frame = 0
+
+[node name="backup3" parent="converyer2/64Conveyer" index="3"]
+visible = false
+position = Vector2( 127, 0 )
+frame = 0
+
+[node name="backup4" parent="converyer2/64Conveyer" index="4"]
+frame = 0
+
+[node name="backup5" parent="converyer2/64Conveyer" index="5"]
+frame = 0
+
+[node name="backup6" parent="converyer2/64Conveyer" index="6"]
+frame = 3
+
+[node name="backup7" parent="converyer2/64Conveyer" index="7"]
+frame = 3
+
+[node name="backup8" parent="converyer2/64Conveyer" index="8"]
+frame = 3
+
+[node name="CollisionShape2D" parent="converyer2/64Conveyer/Area2D" index="0"]
+position = Vector2( 47.5, 0 )
+shape = SubResource( 13 )
+
+[node name="converyer1" type="Node2D" parent="."]
+
+[node name="64Conveyer" parent="converyer1" instance=ExtResource( 5 )]
+position = Vector2( 641, -256 )
+direction = Vector2( -10, 0 )
+
+[node name="AnimatedSprite" parent="converyer1/64Conveyer" index="0"]
+frame = 0
+
+[node name="backup1" parent="converyer1/64Conveyer" index="1"]
+frame = 0
+
+[node name="backup2" parent="converyer1/64Conveyer" index="2"]
+position = Vector2( 64, 0 )
+frame = 0
+
+[node name="backup3" parent="converyer1/64Conveyer" index="3"]
+position = Vector2( 127, 0 )
+frame = 0
+
+[node name="backup4" parent="converyer1/64Conveyer" index="4"]
+frame = 0
+
+[node name="backup5" parent="converyer1/64Conveyer" index="5"]
+frame = 0
+
+[node name="backup6" parent="converyer1/64Conveyer" index="6"]
+frame = 3
+
+[node name="backup7" parent="converyer1/64Conveyer" index="7"]
+frame = 3
+
+[node name="backup8" parent="converyer1/64Conveyer" index="8"]
+frame = 3
+
+[node name="CollisionShape2D" parent="converyer1/64Conveyer/Area2D" index="0"]
+position = Vector2( 63, 0 )
+
+[node name="converyer3" type="Node2D" parent="."]
+position = Vector2( 128, -161 )
+
+[node name="64Conveyer" parent="converyer3" instance=ExtResource( 5 )]
+position = Vector2( 752, -288 )
+rotation = -1.5708
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 0, -18 )
+
+[node name="AnimatedSprite" parent="converyer3/64Conveyer" index="0"]
+position = Vector2( 32, 0 )
+frame = 0
+flip_h = true
+
+[node name="backup1" parent="converyer3/64Conveyer" index="1"]
+position = Vector2( 127, 0.000305176 )
+frame = 0
+flip_h = true
+
+[node name="backup2" parent="converyer3/64Conveyer" index="2"]
+position = Vector2( 62, -0.00012207 )
+frame = 0
+flip_h = true
+
+[node name="backup3" parent="converyer3/64Conveyer" index="3"]
+visible = false
+position = Vector2( 127, 0 )
+frame = 0
+flip_h = true
+
+[node name="backup4" parent="converyer3/64Conveyer" index="4"]
+frame = 0
+flip_h = true
+
+[node name="backup5" parent="converyer3/64Conveyer" index="5"]
+frame = 0
+flip_h = true
+
+[node name="backup6" parent="converyer3/64Conveyer" index="6"]
+frame = 3
+
+[node name="backup7" parent="converyer3/64Conveyer" index="7"]
+frame = 3
+
+[node name="backup8" parent="converyer3/64Conveyer" index="8"]
+frame = 3
+
+[node name="CollisionShape2D" parent="converyer3/64Conveyer/Area2D" index="0"]
+position = Vector2( 63, 0 )
+shape = SubResource( 15 )
+
+[node name="converyer4" type="Node2D" parent="."]
+position = Vector2( 224, -193 )
+
+[node name="64Conveyer" parent="converyer4" instance=ExtResource( 5 )]
+position = Vector2( 720, -320 )
+rotation = -1.5708
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 0, 18 )
+
+[node name="AnimatedSprite" parent="converyer4/64Conveyer" index="0"]
+position = Vector2( 32, 0 )
+frame = 0
+
+[node name="backup1" parent="converyer4/64Conveyer" index="1"]
+position = Vector2( 127, 0.000305176 )
+frame = 0
+
+[node name="backup2" parent="converyer4/64Conveyer" index="2"]
+position = Vector2( 62, -0.00012207 )
+frame = 0
+
+[node name="backup3" parent="converyer4/64Conveyer" index="3"]
+visible = false
+position = Vector2( 127, 0 )
+frame = 0
+
+[node name="backup4" parent="converyer4/64Conveyer" index="4"]
+frame = 0
+
+[node name="backup5" parent="converyer4/64Conveyer" index="5"]
+frame = 0
+
+[node name="backup6" parent="converyer4/64Conveyer" index="6"]
+frame = 3
+
+[node name="backup7" parent="converyer4/64Conveyer" index="7"]
+frame = 3
+
+[node name="backup8" parent="converyer4/64Conveyer" index="8"]
+frame = 3
+
+[node name="CollisionShape2D" parent="converyer4/64Conveyer/Area2D" index="0"]
+position = Vector2( 63.0001, -0.00012207 )
+shape = SubResource( 12 )
+
+[node name="converyer5" type="Node2D" parent="."]
+position = Vector2( 256, -161 )
+
+[node name="vey 1" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 752, -288 )
+rotation = -1.5708
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 0, -18 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 1" index="0"]
+position = Vector2( 32, 0 )
+frame = 0
+flip_h = true
+
+[node name="backup1" parent="converyer5/vey 1" index="1"]
+position = Vector2( 127, 0.000305176 )
+frame = 0
+flip_h = true
+
+[node name="backup2" parent="converyer5/vey 1" index="2"]
+position = Vector2( 62, -0.00012207 )
+frame = 0
+flip_h = true
+
+[node name="backup3" parent="converyer5/vey 1" index="3"]
+visible = false
+position = Vector2( 127, 0 )
+frame = 0
+flip_h = true
+
+[node name="backup4" parent="converyer5/vey 1" index="4"]
+frame = 0
+flip_h = true
+
+[node name="backup5" parent="converyer5/vey 1" index="5"]
+frame = 0
+flip_h = true
+
+[node name="backup6" parent="converyer5/vey 1" index="6"]
+frame = 3
+
+[node name="backup7" parent="converyer5/vey 1" index="7"]
+frame = 3
+
+[node name="backup8" parent="converyer5/vey 1" index="8"]
+frame = 3
+
+[node name="CollisionShape2D" parent="converyer5/vey 1/Area2D" index="0"]
+position = Vector2( 63, 0 )
+shape = SubResource( 15 )
+
+[node name="vey 2" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 976, -256 )
+rotation = -1.5708
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 0, 28 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 2" index="0"]
+position = Vector2( 127, 0.000976563 )
+frame = 0
+
+[node name="backup1" parent="converyer5/vey 2" index="1"]
+position = Vector2( 63, 0.000549316 )
+frame = 0
+
+[node name="backup2" parent="converyer5/vey 2" index="2"]
+position = Vector2( -1, -0.00012207 )
+frame = 0
+
+[node name="backup3" parent="converyer5/vey 2" index="3"]
+position = Vector2( -65, -0.000488281 )
+frame = 0
+
+[node name="backup4" parent="converyer5/vey 2" index="4"]
+visible = false
+position = Vector2( -68.0002, 122 )
+frame = 0
+
+[node name="backup5" parent="converyer5/vey 2" index="5"]
+visible = false
+position = Vector2( -28.0004, 238 )
+frame = 0
+
+[node name="backup6" parent="converyer5/vey 2" index="6"]
+frame = 3
+
+[node name="backup7" parent="converyer5/vey 2" index="7"]
+frame = 3
+
+[node name="backup8" parent="converyer5/vey 2" index="8"]
+frame = 3
+
+[node name="CollisionShape2D" parent="converyer5/vey 2/Area2D" index="0"]
+position = Vector2( 31, 0 )
+shape = SubResource( 18 )
+
+[node name="vey 3" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 1200, -256 )
+rotation = -1.5708
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 0, 55 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 3" index="0"]
+position = Vector2( 127, 0.000976563 )
+frame = 3
+
+[node name="backup1" parent="converyer5/vey 3" index="1"]
+position = Vector2( 63, 0.000549316 )
+frame = 3
+
+[node name="backup2" parent="converyer5/vey 3" index="2"]
+position = Vector2( -1, -0.00012207 )
+frame = 3
+
+[node name="backup3" parent="converyer5/vey 3" index="3"]
+visible = false
+position = Vector2( -65, -0.000488281 )
+frame = 3
+
+[node name="backup4" parent="converyer5/vey 3" index="4"]
+visible = false
+position = Vector2( -68.0002, 122 )
+frame = 3
+
+[node name="backup5" parent="converyer5/vey 3" index="5"]
+visible = false
+position = Vector2( -28.0004, 238 )
+frame = 3
+
+[node name="backup6" parent="converyer5/vey 3" index="6"]
+frame = 3
+
+[node name="backup7" parent="converyer5/vey 3" index="7"]
+frame = 3
+
+[node name="backup8" parent="converyer5/vey 3" index="8"]
+frame = 3
+
+[node name="CollisionShape2D" parent="converyer5/vey 3/Area2D" index="0"]
+position = Vector2( 63, 0 )
+shape = SubResource( 19 )
+
+[node name="vey 4" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 1281, -239 )
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 70, 0 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 4" index="0"]
+position = Vector2( 127, 0.000976563 )
+frame = 3
+flip_h = true
+
+[node name="backup1" parent="converyer5/vey 4" index="1"]
+position = Vector2( 63, 0.000549316 )
+frame = 3
+flip_h = true
+
+[node name="backup2" parent="converyer5/vey 4" index="2"]
+position = Vector2( -1, -0.00012207 )
+frame = 3
+flip_h = true
+
+[node name="backup3" parent="converyer5/vey 4" index="3"]
+position = Vector2( -65, -0.000488281 )
+frame = 3
+flip_h = true
+
+[node name="backup4" parent="converyer5/vey 4" index="4"]
+position = Vector2( 191, 0 )
+frame = 3
+flip_h = true
+
+[node name="backup5" parent="converyer5/vey 4" index="5"]
+position = Vector2( 223, 0 )
+frame = 3
+flip_h = true
+
+[node name="backup6" parent="converyer5/vey 4" index="6"]
+frame = 3
+
+[node name="backup7" parent="converyer5/vey 4" index="7"]
+frame = 3
+
+[node name="backup8" parent="converyer5/vey 4" index="8"]
+frame = 3
+
+[node name="CollisionShape2D" parent="converyer5/vey 4/Area2D" index="0"]
+position = Vector2( 79, 0 )
+shape = SubResource( 20 )
+
+[node name="vey 5" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 1505, -303 )
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( -60, 0 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 5" index="0"]
+position = Vector2( 127, 0.000976563 )
+frame = 3
+
+[node name="backup1" parent="converyer5/vey 5" index="1"]
+position = Vector2( 63, 0.000549316 )
+frame = 3
+
+[node name="backup2" parent="converyer5/vey 5" index="2"]
+position = Vector2( -1, -0.00012207 )
+frame = 3
+
+[node name="backup3" parent="converyer5/vey 5" index="3"]
+position = Vector2( -65, -0.000488281 )
+frame = 3
+
+[node name="backup4" parent="converyer5/vey 5" index="4"]
+visible = false
+position = Vector2( 191, 0 )
+frame = 3
+
+[node name="backup5" parent="converyer5/vey 5" index="5"]
+visible = false
+position = Vector2( 223, 0 )
+frame = 3
+
+[node name="backup6" parent="converyer5/vey 5" index="6"]
+frame = 3
+
+[node name="backup7" parent="converyer5/vey 5" index="7"]
+frame = 3
+
+[node name="backup8" parent="converyer5/vey 5" index="8"]
+frame = 3
+
+[node name="CollisionShape2D" parent="converyer5/vey 5/Area2D" index="0"]
+position = Vector2( 31, 0 )
+shape = SubResource( 21 )
+
+[node name="vey 6" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 1424, -320 )
+rotation = -1.5708
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 0, -40 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 6" index="0"]
+visible = false
+position = Vector2( 127, 0.000976563 )
+frame = 3
+flip_h = true
+
+[node name="backup1" parent="converyer5/vey 6" index="1"]
+position = Vector2( 63, 0.000549316 )
+frame = 3
+flip_h = true
+
+[node name="backup2" parent="converyer5/vey 6" index="2"]
+position = Vector2( -1, -0.00012207 )
+frame = 3
+flip_h = true
+
+[node name="backup3" parent="converyer5/vey 6" index="3"]
+visible = false
+position = Vector2( -65, -0.000488281 )
+frame = 3
+flip_h = true
+
+[node name="backup4" parent="converyer5/vey 6" index="4"]
+visible = false
+position = Vector2( -68.0002, 122 )
+frame = 3
+flip_h = true
+
+[node name="backup5" parent="converyer5/vey 6" index="5"]
+visible = false
+position = Vector2( -28.0004, 238 )
+frame = 3
+flip_h = true
+
+[node name="backup6" parent="converyer5/vey 6" index="6"]
+frame = 3
+
+[node name="backup7" parent="converyer5/vey 6" index="7"]
+frame = 3
+
+[node name="backup8" parent="converyer5/vey 6" index="8"]
+frame = 3
+
+[node name="CollisionShape2D" parent="converyer5/vey 6/Area2D" index="0"]
+position = Vector2( 31, 0 )
+shape = SubResource( 22 )
+
+[node name="vey 7" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 1281, -463 )
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 60, 0 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 7" index="0"]
+position = Vector2( 127, 0.000976563 )
+frame = 3
+flip_h = true
+
+[node name="backup1" parent="converyer5/vey 7" index="1"]
+position = Vector2( 63, 0.000549316 )
+frame = 3
+flip_h = true
+
+[node name="backup2" parent="converyer5/vey 7" index="2"]
+position = Vector2( -1, -0.00012207 )
+frame = 3
+flip_h = true
+
+[node name="backup3" parent="converyer5/vey 7" index="3"]
+position = Vector2( 319, 0 )
+frame = 3
+flip_h = true
+
+[node name="backup4" parent="converyer5/vey 7" index="4"]
+position = Vector2( 191, 0 )
+frame = 3
+flip_h = true
+
+[node name="backup5" parent="converyer5/vey 7" index="5"]
+position = Vector2( 255, 0 )
+frame = 3
+flip_h = true
+
+[node name="backup6" parent="converyer5/vey 7" index="6"]
+visible = true
+position = Vector2( 383, 0 )
+frame = 3
+flip_h = true
+
+[node name="backup7" parent="converyer5/vey 7" index="7"]
+visible = true
+position = Vector2( 447, 0 )
+frame = 3
+flip_h = true
+
+[node name="backup8" parent="converyer5/vey 7" index="8"]
+visible = true
+position = Vector2( 511, 0 )
+frame = 3
+flip_h = true
+
+[node name="CollisionShape2D" parent="converyer5/vey 7/Area2D" index="0"]
+position = Vector2( 255, -0.000488281 )
+shape = SubResource( 23 )
+
+[node name="vey 8" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 1808, -480 )
+rotation = -1.5708
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 0, -75 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 8" index="0"]
+position = Vector2( 127, 0.000976563 )
+flip_h = true
+
+[node name="backup1" parent="converyer5/vey 8" index="1"]
+position = Vector2( 63, 0.000549316 )
+flip_h = true
+
+[node name="backup2" parent="converyer5/vey 8" index="2"]
+position = Vector2( -1, -0.00012207 )
+flip_h = true
+
+[node name="backup3" parent="converyer5/vey 8" index="3"]
+position = Vector2( 159, 0.000976563 )
+flip_h = true
+
+[node name="backup4" parent="converyer5/vey 8" index="4"]
+visible = false
+position = Vector2( -68.0002, 122 )
+flip_h = true
+
+[node name="backup5" parent="converyer5/vey 8" index="5"]
+visible = false
+position = Vector2( -28.0004, 238 )
+flip_h = true
+
+[node name="backup6" parent="converyer5/vey 8" index="6"]
+frame = 3
+
+[node name="backup7" parent="converyer5/vey 8" index="7"]
+frame = 3
+
+[node name="backup8" parent="converyer5/vey 8" index="8"]
+frame = 3
+
+[node name="CollisionShape2D" parent="converyer5/vey 8/Area2D" index="0"]
+position = Vector2( 79, 0 )
+shape = SubResource( 25 )
+
+[node name="vey 9" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 1744, -704 )
+rotation = -1.5708
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 0, 55 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 9" index="0"]
+visible = false
+position = Vector2( 127, 0.000976563 )
+frame = 0
+
+[node name="backup1" parent="converyer5/vey 9" index="1"]
+position = Vector2( 63, 0.000549316 )
+frame = 0
+flip_h = true
+
+[node name="backup2" parent="converyer5/vey 9" index="2"]
+position = Vector2( -1, -0.00012207 )
+frame = 0
+flip_h = true
+
+[node name="backup3" parent="converyer5/vey 9" index="3"]
+position = Vector2( -65, -0.000488281 )
+frame = 0
+flip_h = true
+
+[node name="backup4" parent="converyer5/vey 9" index="4"]
+position = Vector2( -129, -0.000976563 )
+frame = 0
+flip_h = true
+
+[node name="backup5" parent="converyer5/vey 9" index="5"]
+visible = false
+position = Vector2( -28.0004, 238 )
+frame = 0
+flip_h = true
+
+[node name="backup6" parent="converyer5/vey 9" index="6"]
+frame = 3
+flip_h = true
+
+[node name="backup7" parent="converyer5/vey 9" index="7"]
+frame = 3
+flip_h = true
+
+[node name="backup8" parent="converyer5/vey 9" index="8"]
+frame = 3
+flip_h = true
+
+[node name="CollisionShape2D" parent="converyer5/vey 9/Area2D" index="0"]
+position = Vector2( -33, -0.000488281 )
+shape = SubResource( 24 )
+
+[node name="vey 10" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 1665, -879 )
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( -50, 0 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 10" index="0"]
+visible = false
+position = Vector2( 127, 0.000976563 )
+
+[node name="backup1" parent="converyer5/vey 10" index="1"]
+position = Vector2( 63, 0.000549316 )
+
+[node name="backup2" parent="converyer5/vey 10" index="2"]
+position = Vector2( -1, -0.00012207 )
+
+[node name="backup3" parent="converyer5/vey 10" index="3"]
+position = Vector2( -65, -0.000488281 )
+
+[node name="backup4" parent="converyer5/vey 10" index="4"]
+visible = false
+position = Vector2( 191, 0 )
+
+[node name="backup5" parent="converyer5/vey 10" index="5"]
+visible = false
+position = Vector2( 223, 0 )
+
+[node name="backup6" parent="converyer5/vey 10" index="6"]
+frame = 2
+
+[node name="backup7" parent="converyer5/vey 10" index="7"]
+frame = 2
+
+[node name="backup8" parent="converyer5/vey 10" index="8"]
+frame = 2
+
+[node name="CollisionShape2D" parent="converyer5/vey 10/Area2D" index="0"]
+position = Vector2( -0.5, 0 )
+shape = SubResource( 26 )
+
+[node name="vey 11" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 1584, -1024 )
+rotation = -1.5708
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 0, -50 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 11" index="0"]
+visible = false
+position = Vector2( 127, 0.000976563 )
+frame = 3
+
+[node name="backup1" parent="converyer5/vey 11" index="1"]
+position = Vector2( 63, 0.000549316 )
+frame = 3
+flip_h = true
+
+[node name="backup2" parent="converyer5/vey 11" index="2"]
+position = Vector2( -1, -0.00012207 )
+frame = 3
+flip_h = true
+
+[node name="backup3" parent="converyer5/vey 11" index="3"]
+position = Vector2( -65, -0.000488281 )
+frame = 3
+flip_h = true
+
+[node name="backup4" parent="converyer5/vey 11" index="4"]
+position = Vector2( -129, -0.000976563 )
+frame = 3
+flip_h = true
+
+[node name="backup5" parent="converyer5/vey 11" index="5"]
+position = Vector2( 128, 0.000732422 )
+frame = 3
+flip_h = true
+
+[node name="backup6" parent="converyer5/vey 11" index="6"]
+visible = true
+position = Vector2( 159, 0.000732422 )
+frame = 2
+flip_h = true
+
+[node name="backup7" parent="converyer5/vey 11" index="7"]
+visible = true
+position = Vector2( 224, 0.00146484 )
+frame = 2
+flip_h = true
+
+[node name="backup8" parent="converyer5/vey 11" index="8"]
+visible = true
+position = Vector2( 286, 0.00195313 )
+frame = 2
+flip_h = true
+
+[node name="CollisionShape2D" parent="converyer5/vey 11/Area2D" index="0"]
+position = Vector2( 79, -0.000488281 )
+shape = SubResource( 27 )
+
+[node name="vey 13" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 1441, -879 )
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 50, 0 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 13" index="0"]
+visible = false
+position = Vector2( 127, 0.000976563 )
+frame = 0
+flip_h = true
+
+[node name="backup1" parent="converyer5/vey 13" index="1"]
+position = Vector2( 63, 0.000549316 )
+frame = 0
+flip_h = true
+
+[node name="backup2" parent="converyer5/vey 13" index="2"]
+position = Vector2( -1, -0.00012207 )
+frame = 0
+flip_h = true
+
+[node name="backup3" parent="converyer5/vey 13" index="3"]
+position = Vector2( -65, -0.000488281 )
+frame = 0
+flip_h = true
+
+[node name="backup4" parent="converyer5/vey 13" index="4"]
+visible = false
+position = Vector2( 191, 0 )
+frame = 0
+flip_h = true
+
+[node name="backup5" parent="converyer5/vey 13" index="5"]
+visible = false
+position = Vector2( 223, 0 )
+frame = 0
+flip_h = true
+
+[node name="backup6" parent="converyer5/vey 13" index="6"]
+flip_h = true
+
+[node name="backup7" parent="converyer5/vey 13" index="7"]
+flip_h = true
+
+[node name="backup8" parent="converyer5/vey 13" index="8"]
+flip_h = true
+
+[node name="CollisionShape2D" parent="converyer5/vey 13/Area2D" index="0"]
+position = Vector2( -1, 0 )
+shape = SubResource( 26 )
+
+[node name="vey 12" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 1520, -1024 )
+rotation = -1.5708
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 0, -50 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 12" index="0"]
+visible = false
+position = Vector2( 127, 0.000976563 )
+
+[node name="backup1" parent="converyer5/vey 12" index="1"]
+position = Vector2( 63, 0.000549316 )
+flip_h = true
+
+[node name="backup2" parent="converyer5/vey 12" index="2"]
+position = Vector2( -1, -0.00012207 )
+flip_h = true
+
+[node name="backup3" parent="converyer5/vey 12" index="3"]
+position = Vector2( -65, -0.000488281 )
+flip_h = true
+
+[node name="backup4" parent="converyer5/vey 12" index="4"]
+position = Vector2( -129, -0.000976563 )
+flip_h = true
+
+[node name="backup5" parent="converyer5/vey 12" index="5"]
+position = Vector2( 128, 0.000732422 )
+flip_h = true
+
+[node name="backup6" parent="converyer5/vey 12" index="6"]
+position = Vector2( 159, 0.000732422 )
+flip_h = true
+
+[node name="backup7" parent="converyer5/vey 12" index="7"]
+flip_h = true
+
+[node name="backup8" parent="converyer5/vey 12" index="8"]
+flip_h = true
+
+[node name="CollisionShape2D" parent="converyer5/vey 12/Area2D" index="0"]
+position = Vector2( -0.5, -0.000244141 )
+shape = SubResource( 30 )
+
+[node name="vey 14" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 1665, -1423 )
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( -50, 0 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 14" index="0"]
+visible = false
+position = Vector2( 127, 0.000976563 )
+frame = 0
+
+[node name="backup1" parent="converyer5/vey 14" index="1"]
+position = Vector2( 63, 0.000549316 )
+frame = 0
+
+[node name="backup2" parent="converyer5/vey 14" index="2"]
+position = Vector2( -1, -0.00012207 )
+frame = 0
+
+[node name="backup3" parent="converyer5/vey 14" index="3"]
+position = Vector2( -65, -0.000488281 )
+frame = 0
+
+[node name="backup4" parent="converyer5/vey 14" index="4"]
+visible = false
+position = Vector2( 191, 0 )
+frame = 0
+
+[node name="backup5" parent="converyer5/vey 14" index="5"]
+visible = false
+position = Vector2( 223, 0 )
+frame = 0
+
+[node name="CollisionShape2D" parent="converyer5/vey 14/Area2D" index="0"]
+position = Vector2( -0.5, 0 )
+shape = SubResource( 26 )
+
+[node name="vey 15" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 1441, -1263 )
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 50, 0 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 15" index="0"]
+visible = false
+position = Vector2( 127, 0.000976563 )
+frame = 0
+flip_h = true
+
+[node name="backup1" parent="converyer5/vey 15" index="1"]
+position = Vector2( 63, 0.000549316 )
+frame = 0
+flip_h = true
+
+[node name="backup2" parent="converyer5/vey 15" index="2"]
+position = Vector2( -1, -0.00012207 )
+frame = 0
+flip_h = true
+
+[node name="backup3" parent="converyer5/vey 15" index="3"]
+position = Vector2( -65, -0.000488281 )
+frame = 0
+flip_h = true
+
+[node name="backup4" parent="converyer5/vey 15" index="4"]
+visible = false
+position = Vector2( 191, 0 )
+frame = 0
+flip_h = true
+
+[node name="backup5" parent="converyer5/vey 15" index="5"]
+visible = false
+position = Vector2( 223, 0 )
+frame = 0
+flip_h = true
+
+[node name="backup6" parent="converyer5/vey 15" index="6"]
+frame = 3
+flip_h = true
+
+[node name="backup7" parent="converyer5/vey 15" index="7"]
+frame = 3
+flip_h = true
+
+[node name="backup8" parent="converyer5/vey 15" index="8"]
+frame = 3
+flip_h = true
+
+[node name="CollisionShape2D" parent="converyer5/vey 15/Area2D" index="0"]
+position = Vector2( -1, 0 )
+shape = SubResource( 26 )
+
+[node name="vey 16" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 1520, -1408 )
+rotation = -1.5708
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 0, -50 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 16" index="0"]
+position = Vector2( 191, 0.00146484 )
+flip_h = true
+
+[node name="backup1" parent="converyer5/vey 16" index="1"]
+position = Vector2( 63, 0.000549316 )
+flip_h = true
+
+[node name="backup2" parent="converyer5/vey 16" index="2"]
+position = Vector2( -1, -0.00012207 )
+flip_h = true
+
+[node name="backup3" parent="converyer5/vey 16" index="3"]
+position = Vector2( -65, -0.000488281 )
+flip_h = true
+
+[node name="backup4" parent="converyer5/vey 16" index="4"]
+position = Vector2( -129, -0.000976563 )
+flip_h = true
+
+[node name="backup5" parent="converyer5/vey 16" index="5"]
+position = Vector2( 128, 0.000732422 )
+flip_h = true
+
+[node name="backup6" parent="converyer5/vey 16" index="6"]
+position = Vector2( 159, 0.000732422 )
+flip_h = true
+
+[node name="backup7" parent="converyer5/vey 16" index="7"]
+flip_h = true
+
+[node name="backup8" parent="converyer5/vey 16" index="8"]
+flip_h = true
+
+[node name="CollisionShape2D" parent="converyer5/vey 16/Area2D" index="0"]
+position = Vector2( 31, -0.000244141 )
+shape = SubResource( 31 )
+
+[node name="vey 17" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 1584, -1568 )
+rotation = -1.5708
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 0, -50 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 17" index="0"]
+visible = false
+position = Vector2( 191, 0.00146484 )
+
+[node name="backup1" parent="converyer5/vey 17" index="1"]
+position = Vector2( 32, 0.000305176 )
+flip_h = true
+
+[node name="backup2" parent="converyer5/vey 17" index="2"]
+position = Vector2( -1, -0.00012207 )
+flip_h = true
+
+[node name="backup3" parent="converyer5/vey 17" index="3"]
+position = Vector2( -65, -0.000488281 )
+flip_h = true
+
+[node name="backup4" parent="converyer5/vey 17" index="4"]
+position = Vector2( -129, -0.000976563 )
+flip_h = true
+
+[node name="backup5" parent="converyer5/vey 17" index="5"]
+visible = false
+position = Vector2( 128, 0.000732422 )
+flip_h = true
+
+[node name="backup6" parent="converyer5/vey 17" index="6"]
+position = Vector2( 159, 0.000732422 )
+flip_h = true
+
+[node name="backup7" parent="converyer5/vey 17" index="7"]
+flip_h = true
+
+[node name="backup8" parent="converyer5/vey 17" index="8"]
+flip_h = true
+
+[node name="CollisionShape2D" parent="converyer5/vey 17/Area2D" index="0"]
+position = Vector2( -48.5, -0.000732422 )
+shape = SubResource( 32 )
+
+[node name="vey 18" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 1409, -1679 )
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 50, 0 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 18" index="0"]
+position = Vector2( 127, 0.000976563 )
+frame = 0
+flip_h = true
+
+[node name="backup1" parent="converyer5/vey 18" index="1"]
+position = Vector2( 63, 0.000549316 )
+frame = 0
+flip_h = true
+
+[node name="backup2" parent="converyer5/vey 18" index="2"]
+position = Vector2( -1, -0.00012207 )
+frame = 0
+flip_h = true
+
+[node name="backup3" parent="converyer5/vey 18" index="3"]
+position = Vector2( -65, -0.000488281 )
+frame = 0
+flip_h = true
+
+[node name="backup4" parent="converyer5/vey 18" index="4"]
+position = Vector2( 191, 0 )
+frame = 0
+flip_h = true
+
+[node name="backup5" parent="converyer5/vey 18" index="5"]
+position = Vector2( 257, 0 )
+frame = 0
+flip_h = true
+
+[node name="backup6" parent="converyer5/vey 18" index="6"]
+visible = true
+position = Vector2( 322, 0 )
+frame = 3
+flip_h = true
+
+[node name="backup7" parent="converyer5/vey 18" index="7"]
+visible = true
+position = Vector2( 382, 0 )
+frame = 3
+flip_h = true
+
+[node name="backup8" parent="converyer5/vey 18" index="8"]
+frame = 3
+flip_h = true
+
+[node name="CollisionShape2D" parent="converyer5/vey 18/Area2D" index="0"]
+position = Vector2( 159, 0 )
+shape = SubResource( 33 )
+
+[node name="vey 19" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 1904, -1728 )
+rotation = -1.5708
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 0, -50 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 19" index="0"]
+visible = false
+position = Vector2( 191, 0.00146484 )
+frame = 0
+
+[node name="backup1" parent="converyer5/vey 19" index="1"]
+position = Vector2( 32, 0.000305176 )
+frame = 0
+flip_h = true
+
+[node name="backup2" parent="converyer5/vey 19" index="2"]
+position = Vector2( -1, -0.00012207 )
+frame = 0
+flip_h = true
+
+[node name="backup3" parent="converyer5/vey 19" index="3"]
+position = Vector2( -65, -0.000488281 )
+frame = 0
+flip_h = true
+
+[node name="backup4" parent="converyer5/vey 19" index="4"]
+position = Vector2( -129, -0.000976563 )
+frame = 0
+flip_h = true
+
+[node name="backup5" parent="converyer5/vey 19" index="5"]
+position = Vector2( 159, 0.0012207 )
+frame = 0
+flip_h = true
+
+[node name="backup6" parent="converyer5/vey 19" index="6"]
+position = Vector2( 159, 0.000732422 )
+frame = 3
+flip_h = true
+
+[node name="backup7" parent="converyer5/vey 19" index="7"]
+visible = true
+position = Vector2( 97, 0.000976563 )
+frame = 3
+flip_h = true
+
+[node name="backup8" parent="converyer5/vey 19" index="8"]
+frame = 3
+flip_h = true
+
+[node name="CollisionShape2D" parent="converyer5/vey 19/Area2D" index="0"]
+position = Vector2( 15, 0 )
+shape = SubResource( 34 )
+
+[node name="vey 20" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 1985, -1583 )
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( -50, 0 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 20" index="0"]
+visible = false
+position = Vector2( 127, 0.000976563 )
+frame = 3
+
+[node name="backup1" parent="converyer5/vey 20" index="1"]
+position = Vector2( 63, 0.000549316 )
+frame = 3
+
+[node name="backup2" parent="converyer5/vey 20" index="2"]
+position = Vector2( -1, -0.00012207 )
+frame = 3
+
+[node name="backup3" parent="converyer5/vey 20" index="3"]
+position = Vector2( -65, -0.000488281 )
+frame = 3
+
+[node name="backup4" parent="converyer5/vey 20" index="4"]
+visible = false
+position = Vector2( 191, 0 )
+frame = 3
+
+[node name="backup5" parent="converyer5/vey 20" index="5"]
+visible = false
+position = Vector2( 223, 0 )
+frame = 3
+
+[node name="backup6" parent="converyer5/vey 20" index="6"]
+frame = 3
+
+[node name="backup7" parent="converyer5/vey 20" index="7"]
+frame = 3
+
+[node name="backup8" parent="converyer5/vey 20" index="8"]
+frame = 3
+
+[node name="CollisionShape2D" parent="converyer5/vey 20/Area2D" index="0"]
+position = Vector2( -1, 0 )
+shape = SubResource( 26 )
+
+[node name="vey 21" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 2992, -2304 )
+rotation = -1.5708
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 0, -75 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 21" index="0"]
+position = Vector2( 63, 0.000488281 )
+flip_h = true
+
+[node name="backup1" parent="converyer5/vey 21" index="1"]
+position = Vector2( 32, 0.000305176 )
+flip_h = true
+
+[node name="backup2" parent="converyer5/vey 21" index="2"]
+position = Vector2( -1, -0.00012207 )
+flip_h = true
+
+[node name="backup3" parent="converyer5/vey 21" index="3"]
+position = Vector2( -65, -0.000488281 )
+flip_h = true
+
+[node name="backup4" parent="converyer5/vey 21" index="4"]
+position = Vector2( -129, -0.000976563 )
+flip_h = true
+
+[node name="backup5" parent="converyer5/vey 21" index="5"]
+visible = false
+position = Vector2( 128, 0.000732422 )
+flip_h = true
+
+[node name="backup6" parent="converyer5/vey 21" index="6"]
+position = Vector2( 159, 0.000732422 )
+flip_h = true
+
+[node name="backup7" parent="converyer5/vey 21" index="7"]
+flip_h = true
+
+[node name="backup8" parent="converyer5/vey 21" index="8"]
+flip_h = true
+
+[node name="CollisionShape2D" parent="converyer5/vey 21/Area2D" index="0"]
+position = Vector2( -33, -0.00146484 )
+shape = SubResource( 38 )
+
+[node name="vey 22" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 3073, -2159 )
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( -60, 0 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 22" index="0"]
+visible = false
+position = Vector2( 127, 0.000976563 )
+
+[node name="backup1" parent="converyer5/vey 22" index="1"]
+position = Vector2( 63, 0.000549316 )
+
+[node name="backup2" parent="converyer5/vey 22" index="2"]
+position = Vector2( -1, -0.00012207 )
+
+[node name="backup3" parent="converyer5/vey 22" index="3"]
+position = Vector2( -65, -0.000488281 )
+
+[node name="backup4" parent="converyer5/vey 22" index="4"]
+visible = false
+position = Vector2( 191, 0 )
+
+[node name="backup5" parent="converyer5/vey 22" index="5"]
+visible = false
+position = Vector2( 223, 0 )
+
+[node name="backup6" parent="converyer5/vey 22" index="6"]
+frame = 2
+
+[node name="backup7" parent="converyer5/vey 22" index="7"]
+frame = 2
+
+[node name="backup8" parent="converyer5/vey 22" index="8"]
+frame = 2
+
+[node name="CollisionShape2D" parent="converyer5/vey 22/Area2D" index="0"]
+position = Vector2( -1, 0 )
+shape = SubResource( 26 )
+
+[node name="vey 23" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 3073, -2383 )
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 100, 0 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 23" index="0"]
+position = Vector2( 127, 0.000976563 )
+frame = 1
+flip_h = true
+
+[node name="backup1" parent="converyer5/vey 23" index="1"]
+position = Vector2( 63, 0.000549316 )
+frame = 1
+flip_h = true
+
+[node name="backup2" parent="converyer5/vey 23" index="2"]
+position = Vector2( -1, -0.00012207 )
+frame = 1
+flip_h = true
+
+[node name="backup3" parent="converyer5/vey 23" index="3"]
+position = Vector2( -65, -0.000488281 )
+frame = 1
+flip_h = true
+
+[node name="backup4" parent="converyer5/vey 23" index="4"]
+position = Vector2( 191, 0 )
+frame = 1
+flip_h = true
+
+[node name="backup5" parent="converyer5/vey 23" index="5"]
+position = Vector2( 223, 0 )
+frame = 1
+flip_h = true
+
+[node name="backup6" parent="converyer5/vey 23" index="6"]
+visible = true
+position = Vector2( 287, 0 )
+flip_h = true
+
+[node name="CollisionShape2D" parent="converyer5/vey 23/Area2D" index="0"]
+position = Vector2( 111, 0 )
+shape = SubResource( 39 )
+
+[node name="vey 24" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 3792, -2400 )
+rotation = -1.5708
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 0, -75 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 24" index="0"]
+position = Vector2( 63, 0.000488281 )
+frame = 1
+flip_h = true
+
+[node name="backup1" parent="converyer5/vey 24" index="1"]
+position = Vector2( 32, 0.000305176 )
+frame = 1
+flip_h = true
+
+[node name="backup2" parent="converyer5/vey 24" index="2"]
+position = Vector2( -1, -0.00012207 )
+frame = 1
+flip_h = true
+
+[node name="backup3" parent="converyer5/vey 24" index="3"]
+position = Vector2( -65, -0.000488281 )
+frame = 1
+flip_h = true
+
+[node name="backup4" parent="converyer5/vey 24" index="4"]
+position = Vector2( -129, -0.000976563 )
+frame = 1
+flip_h = true
+
+[node name="backup5" parent="converyer5/vey 24" index="5"]
+position = Vector2( 128, 0.000732422 )
+frame = 1
+flip_h = true
+
+[node name="backup6" parent="converyer5/vey 24" index="6"]
+visible = true
+position = Vector2( 193, 0.000732422 )
+frame = 0
+flip_h = true
+
+[node name="backup7" parent="converyer5/vey 24" index="7"]
+visible = true
+position = Vector2( 222, 0.000976563 )
+frame = 0
+flip_h = true
+
+[node name="backup8" parent="converyer5/vey 24" index="8"]
+frame = 0
+flip_h = true
+
+[node name="CollisionShape2D" parent="converyer5/vey 24/Area2D" index="0"]
+position = Vector2( 47, -0.00146484 )
+shape = SubResource( 40 )
+
+[node name="vey 25" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 3873, -2255 )
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( -60, 0 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 25" index="0"]
+visible = false
+position = Vector2( 127, 0.000976563 )
+
+[node name="backup1" parent="converyer5/vey 25" index="1"]
+visible = false
+position = Vector2( 63, 0.000549316 )
+
+[node name="backup2" parent="converyer5/vey 25" index="2"]
+position = Vector2( -1, -0.00012207 )
+
+[node name="backup3" parent="converyer5/vey 25" index="3"]
+position = Vector2( -65, -0.000488281 )
+
+[node name="backup4" parent="converyer5/vey 25" index="4"]
+visible = false
+position = Vector2( 191, 0 )
+
+[node name="backup5" parent="converyer5/vey 25" index="5"]
+visible = false
+position = Vector2( 223, 0 )
+
+[node name="backup6" parent="converyer5/vey 25" index="6"]
+frame = 2
+
+[node name="backup7" parent="converyer5/vey 25" index="7"]
+frame = 2
+
+[node name="backup8" parent="converyer5/vey 25" index="8"]
+frame = 2
+
+[node name="CollisionShape2D" parent="converyer5/vey 25/Area2D" index="0"]
+position = Vector2( -33, 0 )
+shape = SubResource( 41 )
+
+[node name="vey 26" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 3856, -2497 )
+rotation = -1.5708
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 0, 50 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 26" index="0"]
+position = Vector2( 63, 0.000488281 )
+frame = 0
+
+[node name="backup1" parent="converyer5/vey 26" index="1"]
+position = Vector2( 32, 0.000305176 )
+frame = 0
+
+[node name="backup2" parent="converyer5/vey 26" index="2"]
+position = Vector2( -1, -0.00012207 )
+frame = 0
+
+[node name="backup3" parent="converyer5/vey 26" index="3"]
+position = Vector2( -65, -0.000488281 )
+frame = 0
+
+[node name="backup4" parent="converyer5/vey 26" index="4"]
+position = Vector2( -129, -0.000976563 )
+frame = 0
+
+[node name="backup5" parent="converyer5/vey 26" index="5"]
+position = Vector2( 128, 0.000732422 )
+frame = 0
+
+[node name="backup6" parent="converyer5/vey 26" index="6"]
+visible = true
+position = Vector2( 193, 0.000732422 )
+frame = 3
+
+[node name="backup7" parent="converyer5/vey 26" index="7"]
+visible = true
+position = Vector2( 254, 0.000976563 )
+frame = 3
+
+[node name="backup8" parent="converyer5/vey 26" index="8"]
+visible = true
+frame = 3
+
+[node name="CollisionShape2D" parent="converyer5/vey 26/Area2D" index="0"]
+position = Vector2( 62.5, 0 )
+shape = SubResource( 42 )
+
+[node name="vey 27" parent="converyer5" instance=ExtResource( 5 )]
+position = Vector2( 3920, -2624 )
+rotation = -1.5708
+scale = Vector2( 1, 0.5 )
+script = SubResource( 14 )
+direction = Vector2( 0, -75 )
+
+[node name="AnimatedSprite" parent="converyer5/vey 27" index="0"]
+position = Vector2( 63, 0.000488281 )
+frame = 0
+
+[node name="backup1" parent="converyer5/vey 27" index="1"]
+position = Vector2( 32, 0.000305176 )
+frame = 0
+
+[node name="backup2" parent="converyer5/vey 27" index="2"]
+position = Vector2( -1, -0.00012207 )
+frame = 0
+
+[node name="backup3" parent="converyer5/vey 27" index="3"]
+position = Vector2( -65, -0.000488281 )
+frame = 0
+
+[node name="backup4" parent="converyer5/vey 27" index="4"]
+position = Vector2( -129, -0.000976563 )
+frame = 0
+
+[node name="backup5" parent="converyer5/vey 27" index="5"]
+position = Vector2( 128, 0.000732422 )
+frame = 0
+
+[node name="backup6" parent="converyer5/vey 27" index="6"]
+visible = true
+position = Vector2( 193, 0.000732422 )
+frame = 3
+
+[node name="backup7" parent="converyer5/vey 27" index="7"]
+position = Vector2( 254, 0.000976563 )
+frame = 3
+
+[node name="backup8" parent="converyer5/vey 27" index="8"]
+visible = true
+frame = 3
+
+[node name="CollisionShape2D" parent="converyer5/vey 27/Area2D" index="0"]
+position = Vector2( 32, 0.00292969 )
+shape = SubResource( 43 )
+
+[node name="deathBeams" type="Node2D" parent="."]
+z_index = 4
+
+[node name="deathBeam" parent="deathBeams" instance=ExtResource( 6 )]
+position = Vector2( 2338, -2206 )
+bufferTime = 0.5
+lengthTime = 2.0
+
+[node name="death2" parent="deathBeams" instance=ExtResource( 6 )]
+position = Vector2( 2562, -2238 )
+bufferTime = 0.5
+lengthTime = 2.0
+
+[node name="death22" parent="deathBeams" instance=ExtResource( 6 )]
+position = Vector2( 2562, -2174 )
+bufferTime = 0.75
+lengthTime = 2.0
+
+[node name="death23" parent="deathBeams" instance=ExtResource( 6 )]
+position = Vector2( 2626, -2239 )
+bufferTime = 1.0
+lengthTime = 2.0
+
+[node name="death24" parent="deathBeams" instance=ExtResource( 6 )]
+position = Vector2( 2626, -2174 )
+bufferTime = 1.25
+lengthTime = 2.0
+
+[node name="death25" parent="deathBeams" instance=ExtResource( 6 )]
+position = Vector2( 2689, -2238 )
+bufferTime = 1.5
+lengthTime = 2.0
+
+[node name="death26" parent="deathBeams" instance=ExtResource( 6 )]
+position = Vector2( 2690, -2174 )
+bufferTime = 1.75
+lengthTime = 2.0
+
+[node name="death27" parent="deathBeams" instance=ExtResource( 6 )]
+position = Vector2( 2754, -2238 )
+lengthTime = 2.0
+
+[node name="death28" parent="deathBeams" instance=ExtResource( 6 )]
+position = Vector2( 2754, -2174 )
+bufferTime = 2.25
+lengthTime = 2.0
+
+[node name="death3" parent="deathBeams" instance=ExtResource( 6 )]
+position = Vector2( 2978, -2207 )
+bufferTime = 0.5
+lengthTime = 4.0
+
+[node name="death32" parent="deathBeams" instance=ExtResource( 6 )]
+position = Vector2( 3074, -2302 )
+bufferTime = 1.0
+lengthTime = 4.0
+
+[node name="death33" parent="deathBeams" instance=ExtResource( 6 )]
+position = Vector2( 3170, -2399 )
+bufferTime = 1.5
+lengthTime = 4.0
+
+[node name="death4" parent="deathBeams" instance=ExtResource( 6 )]
+position = Vector2( 3714, -2558 )
+lengthTime = 4.0
+
+[node name="death42" parent="deathBeams" instance=ExtResource( 6 )]
+position = Vector2( 3778, -2558 )
+bufferTime = 2.25
+lengthTime = 4.0
+
+[node name="death43" parent="deathBeams" instance=ExtResource( 6 )]
+position = Vector2( 3842, -2558 )
+bufferTime = 2.5
+lengthTime = 4.0
+
+[node name="death44" parent="deathBeams" instance=ExtResource( 6 )]
+position = Vector2( 3906, -2558 )
+bufferTime = 2.75
+lengthTime = 4.0
+
+[node name="death45" parent="deathBeams" instance=ExtResource( 6 )]
+position = Vector2( 3970, -2558 )
+bufferTime = 3.0
+lengthTime = 4.0
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="checkPoint" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 513, -276 )
+
+[node name="checkPoint10" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 320, -1235 )
+
+[node name="checkPoint11" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 289, -628 )
+
+[node name="checkPoint2" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 290, -276 )
+
+[node name="checkPoint3" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 768, -500 )
+
+[node name="checkPoint4" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 1121, -467 )
+
+[node name="checkPoint5" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 1354, -469 )
+
+[node name="checkPoint6" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 1792, -948 )
+
+[node name="checkPoint7" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 2146, -2163 )
+
+[node name="checkPoint8" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 2464, -2228 )
+
+[node name="checkPoint9" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 2849, -2228 )
+
+[node name="checkPoint12" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 4185, -3124 )
+
+[node name="player" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 319, -1223 )
+
+[node name="botSpawner" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 310, -309 )
+
+[node name="botSpawner2" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 423, -292 )
+
+[node name="botSpawner3" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 737, -514 )
+
+[node name="botSpawner4" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 1054, -493 )
+
+[node name="botSpawner5" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 1139, -496 )
+broken = true
+
+[node name="botSpawner6" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 1273, -498 )
+
+[node name="botSpawner7" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 1357, -501 )
+
+[node name="botSpawner8" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 1907, -889 )
+
+[node name="botSpawner9" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 1758, -1022 )
+
+[node name="botSpawner10" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 2115, -2178 )
+
+[node name="botSpawner11" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 2286, -2258 )
+
+[node name="botSpawner12" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 2416, -2258 )
+
+[node name="botSpawner15" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 2517, -2260 )
+broken = true
+
+[node name="botSpawner16" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 2576, -2260 )
+broken = true
+
+[node name="botSpawner17" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 2631, -2260 )
+
+[node name="botSpawner18" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 2792, -2262 )
+
+[node name="botSpawner19" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 2922, -2262 )
+
+[node name="botSpawner20" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 3019, -2336 )
+
+[node name="botSpawner21" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 3117, -2436 )
+
+[node name="botSpawner22" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 3662, -2611 )
+
+[node name="botSpawner23" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 3763, -2611 )
+
+[node name="botSpawner24" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 3837, -2611 )
+
+[node name="botSpawner25" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 3903, -2611 )
+
+[node name="botSpawner26" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 3974, -2611 )
+
+[node name="botSpawner27" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 4141, -3134 )
+
+[node name="BSintro1" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 213, -1232 )
+broken = true
+
+[node name="BSintro2" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 206, -1158 )
+broken = true
+
+[node name="BSintro3" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 267, -1102 )
+
+[node name="BSintro4" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 335, -901 )
+broken = true
+
+[node name="BSintro5" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 279, -841 )
+broken = true
+
+[node name="BSintro6" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 304, -778 )
+
+[node name="BSintro7" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 275, -677 )
+
+[node name="constantBotSpawner" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 846, -485 )
+spawnTime = 2.0
+
+[node name="constantBotSpawner3" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 912, -673 )
+spawnTime = 2.0
+
+[node name="constantBotSpawner4" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 978, -487 )
+spawnTime = 2.0
+
+[node name="constantBotSpawner2" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 737, -397 )
+spawnTime = 2.0
+
+[node name="constantBotSpawner5" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 1425, -626 )
+spawnTime = 1.0
+broken = true
+
+[node name="constantBotSpawner6" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 1872, -525 )
+spawnTime = 1.0
+broken = true
+
+[node name="constantBotSpawner7" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 1495, -681 )
+spawnTime = 0.75
+broken = true
+
+[node name="constantBotSpawner8" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 1964, -1012 )
+spawnTime = 1.0
+broken = true
+
+[node name="constantBotSpawner9" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 3366, -2378 )
+spawnTime = 1.0
+broken = true
+
+[node name="constantBotSpawner10" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 4109, -2476 )
+spawnTime = 1.0
+broken = true
+
+[node name="constantBotSpawner11" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 4079, -2982 )
+spawnTime = 1.0
+broken = true
+
+[node name="constantBotSpawner12" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 4149, -2698 )
+spawnTime = 1.0
+broken = true
+
+[node name="con1" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 1200, -606 )
+spawnTime = 1.5
+broken = true
+
+[node name="con2" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 1978, -1095 )
+spawnTime = 1.0
+broken = true
+
+[node name="con3" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 1631, -1095 )
+spawnTime = 1.0
+broken = true
+
+[node name="con4" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 1631, -1481 )
+spawnTime = 1.0
+broken = true
+
+[node name="con5" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 1959, -1641 )
+spawnTime = 1.0
+broken = true
+
+[node name="con6" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 1596, -1895 )
+spawnTime = 0.75
+broken = true
+
+[node name="con7" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 2281, -1792 )
+spawnTime = 0.75
+broken = true
+
+[node name="lightOrb" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 329, -278 )
+
+[node name="lightOrb2" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 235, -221 )
+
+[node name="lightOrb3" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 494, -216 )
+
+[node name="lightOrb4" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 754, -272 )
+
+[node name="lightOrb5" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 753, -406 )
+
+[node name="lightOrb6" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 934, -516 )
+
+[node name="lightOrb7" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 1043, -463 )
+
+[node name="lightOrb8" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 1170, -506 )
+
+[node name="lightOrb9" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 1305, -437 )
+
+[node name="lightOrb10" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 1503, -395 )
+
+[node name="lightOrb11" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 1759, -461 )
+
+[node name="lightOrb12" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 1704, -568 )
+
+[node name="lightOrb15" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 1652, -772 )
+
+[node name="lightOrb16" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 1757, -822 )
+
+[node name="lightOrb50" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 1918, -911 )
+scale = Vector2( 3, 3 )
+
+[node name="lightOrb13" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 725, -511 )
+
+[node name="lightOrb14" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 543, -310 )
+
+[node name="lightOrb17" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 1873, -1180 )
+
+[node name="lightOrb18" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 1750, -1436 )
+
+[node name="lightOrb19" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 1846, -1706 )
+
+[node name="lightOrb20" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 1945, -1850 )
+
+[node name="lightOrb24" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 1771, -1827 )
+scale = Vector2( 2, 2 )
+
+[node name="lightOrb21" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 2151, -2016 )
+
+[node name="lightOrb22" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 2187, -2182 )
+
+[node name="lightOrb23" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 2073, -2260 )
+scale = Vector2( 1.5, 1.5 )
+script = SubResource( 35 )
+
+[node name="lightOrb25" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 262, -1244 )
+scale = Vector2( 1.5, 1.5 )
+script = SubResource( 35 )
+
+[node name="lightOrb26" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 328, -1164 )
+script = SubResource( 35 )
+
+[node name="lightOrb27" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 235, -1102 )
+script = SubResource( 35 )
+
+[node name="lightOrb28" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 324, -1003 )
+script = SubResource( 35 )
+
+[node name="lightOrb29" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 291, -797 )
+script = SubResource( 35 )
+
+[node name="lightOrb33" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 352, -703 )
+script = SubResource( 35 )
+
+[node name="lightOrb30" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 385, -865 )
+script = SubResource( 35 )
+
+[node name="lightOrb31" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 188, -611 )
+script = SubResource( 35 )
+
+[node name="lightOrb32" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 290, -447 )
+script = SubResource( 35 )
+
+[node name="lightOrb34" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 2834, -2238 )
+
+[node name="lightOrb35" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 3002, -2237 )
+
+[node name="lightOrb36" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 3094, -2333 )
+
+[node name="lightOrb37" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 3201, -2401 )
+
+[node name="lightOrb38" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 3283, -2539 )
+
+[node name="lightOrb39" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 3544, -2527 )
+
+[node name="lightOrb40" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 3790, -2608 )
+
+[node name="lightOrb41" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 3990, -2541 )
+
+[node name="lightOrb42" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 4049, -2581 )
+
+[node name="lightOrb43" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 4120, -2690 )
+
+[node name="lightOrb44" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 4117, -2825 )
+
+[node name="lightOrb45" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 4199, -2837 )
+
+[node name="lightOrb46" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 4229, -2975 )
+
+[node name="lightOrb47" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 4113, -3121 )
+
+[node name="lightOrb48" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 4263, -3198 )
+
+[node name="lightOrb49" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 4260, -3085 )
+
+[node name="tutorial1" type="Position2D" parent="YSort"]
+position = Vector2( 230, -1213 )
+z_index = -2
+
+[node name="Sprite" type="Sprite" parent="YSort/tutorial1"]
+position = Vector2( 190, -60 )
+texture = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="YSort/tutorial1"]
+margin_left = 139.0
+margin_top = -73.0
+margin_right = 249.0
+margin_bottom = -25.0
+rect_rotation = 1.28365
+custom_fonts/font = SubResource( 36 )
+text = "wasd: move
+spacebar: leave body
+"
+uppercase = true
+
+[node name="tutorial2" type="Position2D" parent="YSort"]
+position = Vector2( 936, -505 )
+z_index = -2
+
+[node name="Sprite" type="Sprite" parent="YSort/tutorial2"]
+position = Vector2( 190, -60 )
+texture = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="YSort/tutorial2"]
+margin_left = 141.0
+margin_top = -78.0
+margin_right = 251.0
+margin_bottom = -30.0
+rect_rotation = 0.729698
+custom_fonts/font = SubResource( 37 )
+text = "when in a body:
+hold a direction then 
+space for a dash
+"
+uppercase = true
+
+[node name="Light2D" type="Light2D" parent="YSort"]
+position = Vector2( 4175, -3271 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 14 )
+texture_scale = 2.0
+color = Color( 0.25098, 0.886275, 0.737255, 1 )
+
+[node name="Area2D" type="Area2D" parent="YSort/Light2D"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Light2D/Area2D"]
+position = Vector2( 20, 126 )
+shape = SubResource( 45 )
+
+[node name="endLight" type="Sprite" parent="YSort"]
+modulate = Color( 1, 1, 1, 0.745098 )
+position = Vector2( 4214, -3292 )
+scale = Vector2( 1, 0.67999 )
+z_index = 6
+texture = ExtResource( 13 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.623529, 0.584314, 0.435294, 1 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 2081, -1401 )
+amount = 15000
+lifetime = 20.0
+preprocess = 5.0
+visibility_rect = Rect2( -2000, -2000, 4300, 3300 )
+process_material = SubResource( 5 )
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer2"]
+margin_left = -19.0
+margin_top = -8.0
+margin_right = 660.0
+margin_bottom = 398.0
+
+[node name="Position2D" type="Position2D" parent="CanvasLayer2/ColorRect2"]
+modulate = Color( 1, 1, 1, 0 )
+
+[node name="Label" type="Label" parent="CanvasLayer2/ColorRect2/Position2D"]
+margin_left = 19.0
+margin_top = 8.0
+margin_right = 660.0
+margin_bottom = 367.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 46 )
+text = "thanks for playing
+youtube.com/@mz_eth"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="CanvasLayer2/ColorRect2"]
+margin_left = 143.0
+margin_top = 181.0
+margin_right = 547.0
+margin_bottom = 227.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 47 )
+text = "I should wake up.."
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 0.0
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+volume_db = -80.0
+
+[connection signal="body_entered" from="YSort/Light2D/Area2D" to="." method="_on_Area2D_body_entered"]
+
+[editable path="converyer2/64Conveyer"]
+[editable path="converyer1/64Conveyer"]
+[editable path="converyer3/64Conveyer"]
+[editable path="converyer4/64Conveyer"]
+[editable path="converyer5/vey 1"]
+[editable path="converyer5/vey 2"]
+[editable path="converyer5/vey 3"]
+[editable path="converyer5/vey 4"]
+[editable path="converyer5/vey 5"]
+[editable path="converyer5/vey 6"]
+[editable path="converyer5/vey 7"]
+[editable path="converyer5/vey 8"]
+[editable path="converyer5/vey 9"]
+[editable path="converyer5/vey 10"]
+[editable path="converyer5/vey 11"]
+[editable path="converyer5/vey 13"]
+[editable path="converyer5/vey 12"]
+[editable path="converyer5/vey 14"]
+[editable path="converyer5/vey 15"]
+[editable path="converyer5/vey 16"]
+[editable path="converyer5/vey 17"]
+[editable path="converyer5/vey 18"]
+[editable path="converyer5/vey 19"]
+[editable path="converyer5/vey 20"]
+[editable path="converyer5/vey 21"]
+[editable path="converyer5/vey 22"]
+[editable path="converyer5/vey 23"]
+[editable path="converyer5/vey 24"]
+[editable path="converyer5/vey 25"]
+[editable path="converyer5/vey 26"]
+[editable path="converyer5/vey 27"]
